@@ -10,3 +10,7 @@ create table if not exists lpns (
 );
 
 create index if not exists lpns_issued_at_idx on lpns (issued_at desc);
+
+-- Disable RLS: the Streamlit app is the sole writer, runs server-side,
+-- and is password-gated. Without this, the publishable key is blocked from inserting.
+alter table lpns disable row level security;
