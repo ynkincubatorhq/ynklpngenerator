@@ -6,3 +6,6 @@ venv/
 .streamlit/secrets.toml
 *.pdf
 .DS_Store
+
+# Suraya brain: per-project local jsonl emitted by /capture skill
+.observations.jsonl
